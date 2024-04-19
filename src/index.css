@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.note{
+  background-color: #fef68e;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 300px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-note{
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes-list{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.container{
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 14px;
+  padding-left: 14px;
+  min-height: 100vh;
+}
+
+.note.new{
+  background-color: #67d7cc;
+}
+
+textarea{
+  background-color: #67d7cc;
+  min-height: 280px;
+  border: none;
+  resize: none;
+}
+textarea:focus{
+  outline: none;
+}
+.save{
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+}
+.save:hover{
+  background-color: #ededed;
+}
+.delete-icon{
+  cursor: pointer;
+}
+.search{
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  margin-bottom: 1.3em;
+  padding: 0 15px 0 5px;
+
+}
+.search input{
+  width: 100%;
+  margin-top: 10px;
+  height: 25px;
+  background-color: rgb(233, 233, 233);
+  border: none;
+  outline: none;
+}
+.search input:focus{
+  outline: none;
+  /* border: none; */
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode{
+  background-color: black;
+}
+.dark-mode h1{
+  color: white;
+}
+
+
+
+.modal {
+   display: none; /*Hidden by default */
+  position: fixed; 
+  z-index: 1;  
+  left: 0;
+  top: 0;
+  width: 100%;  
+  height: 100%;  
+  overflow: auto;  
+  background-color: rgba(0,0,0,0.8);  
+   /* background-color:; */
+}
+
+.modal.open {
+  display: block; /* Show the modal when open state is true */
+}
+
+ 
+
+.close {
+  color: black;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.close:hover{
+  color: red;
+}
+
+
+/* AddNoteModal.css */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;  /* 10% from the top and centered */
+  padding: 0 40px 40px 40px; /* Increased padding */
+  border: 1px solid #888;
+  width: 60%; /* Increased width */
+  max-width: 500px; /* Added max-width */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+textarea {
+  margin-bottom: 20px; /* Spacing between form fields */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make inputs full width */
+}
+ 
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.dark-mode{
+  background-color:rgb(47, 56, 56);
+}
+
+.dark-mode:hover{
+  background-color: black;
+}
+
+.sort-select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e1e1e1;
+  font-size: 16px;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+.sort-select:hover {
+  border-color: #888;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.modal-content .ql-container {
+  height: 260px !important; /* Adjust height as needed */
+  margin-bottom: 15px;
+  overflow: auto;
+}
+
+
